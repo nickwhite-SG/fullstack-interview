@@ -1,13 +1,62 @@
-Backend Tasks:
+# Permit Registration System - Interview Project
 
-Implement GetPermitRegistration(id) - Handle 404 cases
-Implement CreatePermitRegistration - Add proper validation and return CreatedAtAction
-Implement UpdatePermitStatus - Update only status field
-Add query parameters to GET - Filter by status, permit type, or search by applicant name
+This is a technical interview project featuring a permit registration system with an ASP.NET Core API backend and Angular frontend.
 
-Frontend Tasks:
+## Quick Start
 
-Complete the create permit form - Reactive forms with validation
-Add search/filter functionality to the permit list
-Add status update functionality - Button to change permit status
-Implement error handling - Display user-friendly error messages
+The development environment is pre-configured. To start the applications:
+
+### Backend API
+
+```bash
+cd InterviewApi
+dotnet run
+```
+
+The API will be available at `http://localhost:5098`
+Swagger documentation: `http://localhost:5098/swagger`
+
+### Frontend Application
+
+```bash
+cd interview-frontend
+ng serve
+```
+
+The Angular app will be available at `http://localhost:4200`
+
+## Project Structure
+
+```
+permit-interview/
+├── InterviewApi/           # ASP.NET Core Web API
+│   ├── Controllers/        # API Controllers
+│   ├── Models/            # Data models
+│   ├── DTOs/              # Data transfer objects
+│   └── Data/              # Entity Framework context
+└── interview-frontend/     # Angular application
+    ├── src/app/
+    │   ├── components/     # Angular components
+    │   ├── models/         # TypeScript interfaces
+    │   └── services/       # HTTP services
+```
+
+## What's Already Implemented
+
+- Basic project structure and configuration
+- In-memory database with seed data
+- Permit registration model and DTOs
+- Basic API controller with GET all permits
+- Angular service for API communication
+- Permit list component displaying data
+- Navigation between pages
+
+## Interview Tasks
+
+You'll be asked to implement various features. The specific tasks will be provided during the interview.
+
+## Available Data
+
+The system includes sample permit registrations with different types (Building, Electrical, etc.) and statuses (Pending, Under Review, Approved, etc.).
+
+Good luck!

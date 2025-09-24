@@ -1,0 +1,35 @@
+{
+  "name": "Permit Interview Environment",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0-jammy",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "angular.ng-template",
+        "ms-vscode.vscode-typescript-next",
+        "ms-dotnettools.vscode-dotnet-runtime"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "forwardPorts": [5098, 4200],
+  "portsAttributes": {
+    "5098": {
+      "label": "API",
+      "onAutoForward": "notify"
+    },
+    "4200": {
+      "label": "Angular App",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "remoteUser": "vscode"
+}
