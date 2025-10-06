@@ -20,7 +20,7 @@ Swagger documentation: `http://localhost:5098/swagger`
 
 ```bash
 cd interview-frontend
-ng serve
+ng serve --proxy-config proxy.conf.json --host 0.0.0.0
 ```
 
 The Angular app will be available at `http://localhost:4200`

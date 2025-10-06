@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { PermitRegistration, CreatePermitRegistration } from '../models/permit-registration';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PermitService {
-  private apiUrl = 'http://localhost:5098/api/permitregistrations';
+  private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 
